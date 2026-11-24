@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# 授予 GITHUB_TOKEN 写权限，否则 JamesIves 推送 gh-pages 分支会报 exit 128
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
